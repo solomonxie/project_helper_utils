@@ -1,2 +1,3 @@
-# project_helper_utils
-# Python project common snippets / utils for copy &amp; paste.
+# Project Helper Utils
+
+> Python project common snippets / utils for copy & paste.
