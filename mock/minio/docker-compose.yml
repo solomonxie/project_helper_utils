@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  myapp:
+    image: myname/myapp:latest
+    links:
+      - s3-minio
+    volumes:
+      - ./:/src
+
+  s3-minio:
+    image: registry.hub.docker.com/minio/minio:latest
+    env_file:
+     - ./envfile-local.txt
+    volumes:
+      - /tmp/:/data
+    command: minio server /data
